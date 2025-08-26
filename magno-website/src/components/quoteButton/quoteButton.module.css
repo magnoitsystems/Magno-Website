@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 215px;
+    min-height: 40px;
+
+    padding: var(--10px);
+    padding-inline: var(--20px);
+
+    background-color: var(--pink-1);
+    color: var(--neutral-1);
+    border-radius: 100px;
+    font-weight: 700;
+}

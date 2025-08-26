@@ -1,0 +1,37 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    max-height: 85px;
+
+    padding: var(--20px);
+    margin: var(--40px);
+    margin-inline: auto;
+
+    background: linear-gradient(to bottom, var(--neutral-5), var(--neutral-6));
+    color: var(--neutral-1);
+    border-radius: var(--20px);
+}
+
+.logo, .sections {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.sections {
+    gap: var(--20px);
+
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.sections h5:hover {
+    color: var(--pink-1);
+}
