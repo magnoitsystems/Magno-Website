@@ -1,0 +1,16 @@
+{
+  "magno": {
+    "title": "MAGNO",
+    "definition": {
+      "label": "(Adjetivo)",
+      "meaning": "grande (ll que supera a lo común)."
+    },
+    "description": {
+      "intro": "Y eso es lo que buscamos en cada proyecto:",
+      "main": "{superar} lo común, {destacar} en cada detalle, y entregar un trabajo a la {altura} de su nombre.",
+      "superar": "Superar",
+      "destacar": "destacar", 
+      "altura": "altura"
+    }
+  }
+}
