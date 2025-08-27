@@ -15,9 +15,10 @@
 //   );
 // }
 
-export default function Page({ params }: { params: { locale: string } }) {
-  return <h1>Locale actual: {params.locale}</h1>;
+import {useTranslations} from 'next-intl';
+ 
+export default function HomePage() {
+  const t = useTranslations('HomePage');
+  return <h1>{t('title')}</h1>;
 }
-
-
 
