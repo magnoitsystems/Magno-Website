@@ -1,5 +1,5 @@
 .heroSection {
-  background-color: black; 
+  background-color: black;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -24,31 +24,31 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: var(--15px);
+  gap: var(--20px);
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
 .title {
   color: var(--neutral-1);
-  font-size: var(--h1);
+  font-size: calc(var(--h1) * 1.4);
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .definition {
-  margin-left: calc(40px + var(--15px));
+  margin-left: calc(60px + var(--20px)); 
 }
 
 .definitionText {
   color: var(--neutral-1);
-  font-size: var(--h6);
-  line-height: 1.4;
-  margin-bottom: var(--5px);
+  font-size: calc(var(--h5) * 1.1);
+  line-height: 1.5;
+  margin-bottom: var(--8px);
 }
 
 .label {
@@ -69,13 +69,13 @@
 
 .description {
   color: var(--neutral-1);
-  font-size: var(--h6);
+  font-size: calc(var(--h5) * 1.1);
   opacity: 0.9;
 }
 
 .mainDescription {
   color: var(--neutral-1);
-  font-size: var(--h5);
+  font-size: calc(var(--h4) * 1.2);
   line-height: 1.6;
   font-weight: 300;
 }
@@ -85,24 +85,40 @@
   font-weight: 500;
 }
 
-/* Responsive para tablet */
 @media (min-width: 768px) {
   .container {
-    max-width: 600px;
+    max-width: 700px;
     gap: var(--50px);
   }
   
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .title {
+    font-size: calc(var(--h1) * 1.6);
+    letter-spacing: 4px;
   }
   
   .definition {
-    margin-left: calc(50px + var(--20px));
+    margin-left: calc(80px + var(--25px));
   }
   
   .logoContainer {
-    gap: var(--20px);
+    gap: var(--25px);
+  }
+  
+  .definitionText {
+    font-size: calc(var(--h4) * 1.1);
+  }
+  
+  .description {
+    font-size: calc(var(--h4) * 1.1);
+  }
+  
+  .mainDescription {
+    font-size: calc(var(--h3) * 1.2);
   }
 }
 
@@ -112,7 +128,7 @@
   }
   
   .container {
-    max-width: 900px;
+    max-width: 1100px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -121,30 +137,47 @@
   
   .logoSection {
     flex: 1;
-    max-width: 400px;
+    max-width: 500px;
   }
   
   .descriptionSection {
     flex: 1;
-    max-width: 400px;
+    max-width: 500px;
     text-align: left;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: var(--25px);
+    gap: var(--30px);
   }
   
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .title {
+    font-size: calc(var(--h1) * 2);
+    letter-spacing: 5px;
   }
   
   .definition {
-    margin-left: calc(60px + var(--25px));
+    margin-left: calc(100px + var(--30px));
   }
   
   .logoContainer {
-    gap: var(--25px);
+    gap: var(--30px);
+  }
+  
+  .definitionText {
+    font-size: calc(var(--h3) * 1.1);
+  }
+  
+  .description {
+    font-size: calc(var(--h3) * 1.1);
+  }
+  
+  .mainDescription {
+    font-size: calc(var(--h2) * 1.3);
   }
 }
 

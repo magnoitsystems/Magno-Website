@@ -23,7 +23,7 @@ const MagnoDefinition = () => {
               <span className={styles.label}>(Adjetivo)</span>
             </p>
             <p className={styles.definitionText}>
-              <span className={styles.bold}>grande</span> (ll que supera a lo común).
+              <span className={styles.bold}>grande</span> (|| que supera a lo común).
             </p>
           </div>
         </div>
