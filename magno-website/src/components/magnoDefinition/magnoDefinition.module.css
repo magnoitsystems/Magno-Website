@@ -12,18 +12,23 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--40px);
 }
 
 .logoSection {
   display: flex;
   flex-direction: column;
-  gap: var(--20px);
+  align-items: center;
+  gap: var(--25px);
+  width: 100%;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--20px);
 }
 
@@ -31,6 +36,7 @@
   width: 60px;
   height: 60px;
   object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(22%) saturate(872%) hue-rotate(17deg) brightness(96%) contrast(89%);
 }
 
 .title {
@@ -41,7 +47,8 @@
 }
 
 .definition {
-  margin-left: calc(60px + var(--20px)); 
+  margin-left: 0; 
+  text-align: center;
 }
 
 .definitionText {
@@ -64,7 +71,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--20px);
-  text-align: right;
+  text-align: center;
+  align-items: center;
 }
 
 .description {
@@ -101,10 +109,6 @@
     letter-spacing: 4px;
   }
   
-  .definition {
-    margin-left: calc(80px + var(--25px));
-  }
-  
   .logoContainer {
     gap: var(--25px);
   }
@@ -133,11 +137,23 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: var(--50px);
+    text-align: left;
   }
   
   .logoSection {
     flex: 1;
     max-width: 500px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .logoContainer {
+    justify-content: flex-start;
+  }
+  
+  .definition {
+    margin-left: calc(100px + var(--30px)); 
+    text-align: left;
   }
   
   .descriptionSection {
@@ -148,6 +164,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--30px);
+    align-items: flex-start;
   }
   
   .logo {
@@ -158,10 +175,6 @@
   .title {
     font-size: calc(var(--h1) * 2);
     letter-spacing: 5px;
-  }
-  
-  .definition {
-    margin-left: calc(100px + var(--30px));
   }
   
   .logoContainer {
