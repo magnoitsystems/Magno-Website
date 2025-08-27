@@ -6,7 +6,6 @@ const MagnoDefinition = () => {
   return (
     <section className={styles.heroSection}>
       <div className={styles.container}>
-        {/* Logo y título */}
         <div className={styles.logoSection}>
           <div className={styles.logoContainer}>
             <Image
@@ -29,7 +28,6 @@ const MagnoDefinition = () => {
           </div>
         </div>
 
-        {/* Descripción */}
         <div className={styles.descriptionSection}>
           <p className={styles.description}>
             Y eso es lo que buscamos en cada proyecto:

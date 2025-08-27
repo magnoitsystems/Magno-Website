@@ -106,7 +106,6 @@
   }
 }
 
-/* Responsive para desktop */
 @media (min-width: 1024px) {
   .heroSection {
     padding: var(--40px);
@@ -149,7 +148,6 @@
   }
 }
 
-/* Responsive para pantallas muy grandes */
 @media (min-width: 1440px) {
   .container {
     max-width: 1200px;
