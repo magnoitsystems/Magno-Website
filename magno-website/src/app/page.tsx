@@ -1,3 +1,4 @@
+import MagnoDefinition from "@/components/magnoDefinition/magnoDefinition";
 import styles from "./page.module.css";
 import NavBar from "@/components/navBar/navBar";
 
@@ -6,6 +7,9 @@ export default function Home() {
     <main className={styles.page}>
       <div>
         <NavBar/>
+      </div>
+      <div>
+        <MagnoDefinition></MagnoDefinition>
       </div>
     </main>
   );

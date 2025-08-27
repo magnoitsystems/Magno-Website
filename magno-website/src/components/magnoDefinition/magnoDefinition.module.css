@@ -1,0 +1,157 @@
+.heroSection {
+  background-color: black; 
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--20px);
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--40px);
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--20px);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--15px);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.title {
+  color: var(--neutral-1);
+  font-size: var(--h1);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.definition {
+  margin-left: calc(40px + var(--15px));
+}
+
+.definitionText {
+  color: var(--neutral-1);
+  font-size: var(--h6);
+  line-height: 1.4;
+  margin-bottom: var(--5px);
+}
+
+.label {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--20px);
+  text-align: right;
+}
+
+.description {
+  color: var(--neutral-1);
+  font-size: var(--h6);
+  opacity: 0.9;
+}
+
+.mainDescription {
+  color: var(--neutral-1);
+  font-size: var(--h5);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.highlight {
+  color: var(--pink-1);
+  font-weight: 500;
+}
+
+/* Responsive para tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    gap: var(--50px);
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .definition {
+    margin-left: calc(50px + var(--20px));
+  }
+  
+  .logoContainer {
+    gap: var(--20px);
+  }
+}
+
+/* Responsive para desktop */
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: var(--40px);
+  }
+  
+  .container {
+    max-width: 900px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--50px);
+  }
+  
+  .logoSection {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .descriptionSection {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--25px);
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .definition {
+    margin-left: calc(60px + var(--25px));
+  }
+  
+  .logoContainer {
+    gap: var(--25px);
+  }
+}
+
+/* Responsive para pantallas muy grandes */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
