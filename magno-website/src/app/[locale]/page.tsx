@@ -2,6 +2,9 @@
 // import styles from "./page.module.css";
 // import NavBar from "@/components/navBar/navBar";
 
+import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
+
+
 // export default function Home() {
 //   return (
 //     <main className={styles.page}>
@@ -15,9 +18,12 @@
 //   );
 // }
 
-export default function Page({ params }: { params: { locale: string } }) {
-  return <h1>Locale actual: {params.locale}</h1>;
+export default function HomePage() {
+  return (
+    <main>
+      <MagnoDefinition />
+      {/* Aquí puedes agregar más componentes */}
+    </main>
+  );
 }
-
-
 
