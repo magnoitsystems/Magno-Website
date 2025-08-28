@@ -1,0 +1,75 @@
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--15px);
+  margin: 0 var(--15px);         
+  text-align: center;
+}
+
+.card {
+  border: 1px solid var(--gold-2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;            
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card.open {
+  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+}
+
+.cardHeader {
+  width: 100%;
+  background: transparent;            
+  color: var(--neutral-1);
+  font-size: var(--h5);
+  padding: var(--15px) var(--20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--10px);
+  cursor: pointer;
+  border: none;                     
+}
+
+.card.open .cardHeader { color: var(--neutral-5); }
+
+.arrow { display: flex; align-items: center; }
+.icon  { fill: currentColor; transition: transform 0.2s ease; }
+
+.cardContent {
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;           
+  color: var(--neutral-5);
+  padding: 0 var(--20px);
+  font-size: var(--h6);
+  line-height: 1.5;
+  opacity: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+}
+
+.cardContent p { margin: 0; }
+
+.card.open .cardContent {             
+  color: var(--neutral-5);
+}
+
+.cardContent.show {
+  max-height: 500px;                
+  padding: var(--15px) var(--20px);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .cardsContainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;         
+    gap: var(--25px);
+    margin: 0;
+  }
+  
+  .card { width: 300px; }
+  .arrow { display: none; }          
+}

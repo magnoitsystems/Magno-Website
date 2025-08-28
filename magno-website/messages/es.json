@@ -9,5 +9,22 @@
       "intro": "Y eso es lo que buscamos en cada proyecto:",
       "main": "<superar>Superar</superar> lo común, <destacar>destacar</destacar> en cada detalle, y entregar un trabajo a la <altura>altura</altura> de su nombre."
     }
+  },
+  "services": {
+    "cards": [
+      {
+        "title": "Experiencia UX/UI",
+        "description": "Actualizá tu sitio de forma simple y rápida, sin necesidad de conocimientos técnicos. Diseñamos paneles intuitivos para que puedas cargar, editar o eliminar contenido de forma independiente."
+      },
+      {
+        "title": "AUTO - Administración",
+        "description": "Actualizá tu sitio de forma simple y rápida, sin necesidad de conocimientos técnicos. Diseñamos paneles intuitivos para que puedas cargar, editar o eliminar contenido de forma independiente."
+      },
+      {
+        "title": "Diseño a medida",
+        "description": "Actualizá tu sitio de forma simple y rápida, sin necesidad de conocimientos técnicos. Diseñamos paneles intuitivos para que puedas cargar, editar o eliminar contenido de forma independiente."
+      }
+    ]
   }
 }
+
