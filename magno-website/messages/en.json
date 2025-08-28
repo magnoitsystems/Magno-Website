@@ -9,5 +9,22 @@
       "intro": "And that's what we seek in every project:",
       "main": "To <superar>surpass</superar> the ordinary, <destacar>excel</destacar> in every detail, and deliver work that lives up to the <altura>greatness</altura> of its name."
     }
+  },
+  "services": {
+    "cards": [
+      {
+        "title": "UX/UI Experience",
+        "description": "Update your site easily and quickly, without the need for technical knowledge. We design intuitive panels so you can upload, edit, or delete content independently."
+      },
+      {
+        "title": "AUTO - Administration",
+        "description": "Update your site easily and quickly, without the need for technical knowledge. We design intuitive panels so you can upload, edit, or delete content independently."
+      },
+      {
+        "title": "Custom Design",
+        "description": "Update your site easily and quickly, without the need for technical knowledge. We design intuitive panels so you can upload, edit, or delete content independently."
+      }
+    ]
   }
 }
+
