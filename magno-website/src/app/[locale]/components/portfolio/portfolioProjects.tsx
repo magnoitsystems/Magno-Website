@@ -37,30 +37,53 @@ export default function PortfolioProjects() {
 
   return (
     <section className={styles.portfolioContainer}>
-      <div className={styles.projectsGrid}>
-        {projects.map((project) => (
-          <a key={project.id} href={project.url} className={styles.projectItem}>
+      {/* Primeras dos cards arriba */}
+      <div className={styles.topProjectsGrid}>
+        {projects.slice(0, 2).map((project) => (
+          <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className={styles.projectItem}>
             <Image
               src={project.image}
               alt={project.id}
-              width={600}
-              height={400}
-              className={styles.projectItem}
+              width={500}
+              height={333}
+              className={styles.projectImage}
             />
             <div className={styles.overlay} />
             <Image
               src={project.logo}
               alt={`${project.id}-logo`}
-              width={150}
-              height={150}
+              width={120}
+              height={120}
               className={styles.projectLogo}
             />
           </a>
         ))}
       </div>
-      <div className={styles.portfolioText}>
-        <h2>{t("title")}</h2>
-        <p>{t("description")}</p>
+
+      {/* Tercera card y texto lado a lado */}
+      <div className={styles.bottomSection}>
+        <a href={projects[2].url} target="_blank" rel="noopener noreferrer" className={styles.projectItem}>
+          <Image
+            src={projects[2].image}
+            alt={projects[2].id}
+            width={500}
+            height={333}
+            className={styles.projectImage}
+          />
+          <div className={styles.overlay} />
+          <Image
+            src={projects[2].logo}
+            alt={`${projects[2].id}-logo`}
+            width={120}
+            height={120}
+            className={styles.projectLogo}
+          />
+        </a>
+        
+        <div className={styles.portfolioText}>
+          <h2>{t("title")}</h2>
+          <p>{t("description")}</p>
+        </div>
       </div>
     </section>
   );
