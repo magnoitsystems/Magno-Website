@@ -4,6 +4,7 @@
 
 import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
 import NavBar from "@/app/[locale]/components/navBar/navBar";
+import Footer from "@/app/[locale]/components/footer/footer";
 
 
 // export default function Home() {
@@ -25,7 +26,8 @@ export default function HomePage() {
         <div>
             <NavBar/>
         </div>
-      <MagnoDefinition />
+        <MagnoDefinition />
+        <Footer/>
     </main>
   );
 }
