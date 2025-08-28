@@ -2,28 +2,25 @@
   display: flex;
   flex-direction: column;
   gap: var(--15px);
-  margin: 0 var(--15px);              /* margen lateral mobile */
+  margin: 0 var(--15px);         
   text-align: center;
 }
 
-/* ===== CARD ===== */
 .card {
   border: 1px solid var(--gold-2);
   border-radius: 8px;
   overflow: hidden;
-  background: transparent;            /* cerrado: fondo transparente */
+  background: transparent;            
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* ABIERTO: el FONDO va en .card (no en header/content) -> sin raya */
 .card.open {
   background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
 }
 
-/* ===== HEADER ===== */
 .cardHeader {
   width: 100%;
-  background: transparent;            /* siempre transparente */
+  background: transparent;            
   color: var(--neutral-1);
   font-size: var(--h5);
   padding: var(--15px) var(--20px);
@@ -32,21 +29,18 @@
   align-items: center;
   gap: var(--10px);
   cursor: pointer;
-  border: none;                        /* evita línea */
+  border: none;                     
 }
 
-/* Texto oscuro cuando está abierta (fondo dorado) */
 .card.open .cardHeader { color: var(--neutral-5); }
 
-/* ===== ICONO (solo mobile) ===== */
 .arrow { display: flex; align-items: center; }
 .icon  { fill: currentColor; transition: transform 0.2s ease; }
 
-/* ===== CONTENT ===== */
 .cardContent {
   max-height: 0;
   overflow: hidden;
-  background: transparent;            /* siempre transparente */
+  background: transparent;           
   color: var(--neutral-5);
   padding: 0 var(--20px);
   font-size: var(--h6);
@@ -57,25 +51,25 @@
 
 .cardContent p { margin: 0; }
 
-.card.open .cardContent {             /* color del texto correcto sobre dorado */
+.card.open .cardContent {             
   color: var(--neutral-5);
 }
 
 .cardContent.show {
-  max-height: 500px;                  /* suficiente para el texto */
+  max-height: 500px;                
   padding: var(--15px) var(--20px);
   opacity: 1;
 }
 
-/* ===== DESKTOP ===== */
 @media (min-width: 768px) {
   .cardsContainer {
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;          /* <-- clave: NO estirar alto de hermanas */
+    align-items: flex-start;         
     gap: var(--25px);
     margin: 0;
   }
+  
   .card { width: 300px; }
-  .arrow { display: none; }           /* sin flechas en desktop */
+  .arrow { display: none; }          
 }

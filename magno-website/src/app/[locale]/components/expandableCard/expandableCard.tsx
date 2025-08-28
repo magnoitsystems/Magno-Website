@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import styles from "./expandableCard.module.css";
+import { openSans } from "@/app/ui/fonts";
 
 export default function ExpandableCards() {
   const t = useTranslations("services");
@@ -39,7 +40,7 @@ export default function ExpandableCards() {
         return (
           <div
             key={index}
-            className={`${styles.card} ${isOpen ? styles.open : ""}`}
+            className={`${styles.card} ${isOpen ? styles.open : ""} ${openSans.className}`}
             onMouseEnter={() => !isMobile && setOpenIndex(index)}
             onMouseLeave={() => !isMobile && setOpenIndex(null)}
           >
