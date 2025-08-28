@@ -1,5 +1,3 @@
-/* Mobile First Approach */
-
 .portfolioContainer {
   display: flex;
   flex-direction: column;
@@ -8,7 +6,6 @@
   margin: var(--30px) 0;
 }
 
-/* Texto del portfolio (mobile) */
 .portfolioText {
   padding: 0 var(--20px);
 }
@@ -27,7 +24,6 @@
   margin: 0 auto;
 }
 
-/* Carrusel móvil */
 .mobileCarousel {
   position: relative;
   width: 100%;
@@ -53,27 +49,22 @@
   width: 100%;
 }
 
-/* Botones del carrusel */
 .carouselButton {
-  background: rgba(255, 255, 255, 0.9);
+  background: transparent; 
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: white;
   transition: all 0.2s;
   z-index: 10;
 }
 
 .carouselButton:hover {
-  background: rgba(255, 255, 255, 1);
+  color: var(--pink-1); 
   transform: scale(1.1);
 }
 
@@ -81,7 +72,6 @@
   transform: scale(0.95);
 }
 
-/* Indicadores de slides */
 .slideIndicators {
   display: flex;
   justify-content: center;
@@ -104,7 +94,6 @@
   transform: scale(1.2);
 }
 
-/* Proyecto item (común) */
 .projectItem {
   position: relative;
   cursor: pointer;
@@ -156,30 +145,25 @@
   opacity: 0;
 }
 
-/* Ocultar layout de escritorio en mobile */
 .desktopLayout {
   display: none;
 }
 
-/* TABLET Y DESKTOP */
 @media (min-width: 769px) {
   .portfolioContainer {
     gap: var(--40px);
   }
 
-  /* Ocultar elementos móviles */
   .portfolioText,
   .mobileCarousel,
   .slideIndicators {
     display: none;
   }
 
-  /* Mostrar layout de escritorio */
   .desktopLayout {
     display: block;
   }
 
-  /* Grid para las dos primeras cards arriba */
   .topProjectsGrid {
     display: flex;
     gap: var(--20px);
@@ -187,7 +171,6 @@
     flex-wrap: wrap;
   }
 
-  /* Sección inferior: tercera card + texto */
   .bottomSection {
     display: flex;
     gap: var(--40px);
@@ -216,14 +199,12 @@
     line-height: 1.6;
   }
 
-  /* Tamaño desktop para cards */
   .desktopLayout .projectItem {
     width: 400px;
     height: 267px;
   }
 }
 
-/* RESPONSIVE PARA PANTALLAS MUY PEQUEÑAS */
 @media (max-width: 320px) {
   .carouselContainer {
     width: 250px;
