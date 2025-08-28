@@ -1,6 +1,6 @@
 import styles from './navBar.module.css';
 import Image from 'next/image';
-import QuoteButton from "@/components/quoteButton/quoteButton";
+import QuoteButton from "../quoteButton/quoteButton";
 import {openSans} from '@/app/ui/fonts';
 
 export default function NavBar() {

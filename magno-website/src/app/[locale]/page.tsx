@@ -3,6 +3,7 @@
 // import NavBar from "@/components/navBar/navBar";
 
 import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
+import NavBar from "@/app/[locale]/components/navBar/navBar";
 
 
 // export default function Home() {
@@ -21,8 +22,10 @@ import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
 export default function HomePage() {
   return (
     <main>
+        <div>
+            <NavBar/>
+        </div>
       <MagnoDefinition />
-      {/* Aquí puedes agregar más componentes */}
     </main>
   );
 }
