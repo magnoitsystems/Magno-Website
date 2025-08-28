@@ -2,7 +2,7 @@
 // import styles from "./page.module.css";
 // import NavBar from "@/components/navBar/navBar";
 
-import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
+import Services from "./components/servicesSection/services";
 
 
 // export default function Home() {
@@ -21,8 +21,7 @@ import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
 export default function HomePage() {
   return (
     <main>
-      <MagnoDefinition />
-      {/* Aquí puedes agregar más componentes */}
+      <Services></Services>
     </main>
   );
 }
