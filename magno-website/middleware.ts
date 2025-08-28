@@ -1,19 +1,26 @@
-// middleware.ts
 import createMiddleware from 'next-intl/middleware';
-
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'es'],
-
-  // Used when no locale matches
-  defaultLocale: 'es'
-});
-
+import {NextRequest} from 'next/server';
+ 
+export default async function middleware(request: NextRequest) {
+  const [, locale, ...segments] = request.nextUrl.pathname.split('/');
+ 
+  if (locale != null && segments.join('/') === 'profile') {
+    const usesNewProfile =
+      (request.cookies.get('NEW_PROFILE')?.value || 'false') === 'true';
+ 
+    if (usesNewProfile) {
+      request.nextUrl.pathname = `/${locale}/profile/new`;
+    }
+  }
+ 
+  const handleI18nRouting = createMiddleware({
+    locales: ['en', 'de'],
+    defaultLocale: 'en'
+  });
+  const response = handleI18nRouting(request);
+  return response;
+}
+ 
 export const config = {
-  // Matcher de next.js. Aplica el middleware a todas las rutas que NO incluyan:
-  // - Rutas de API
-  // - Archivos estáticos
-  // - Archivos con extensión
-  // El último '.*' se asegura de incluir rutas con y sin prefijo de idioma.
-  matcher: ['/', '/(es|en)/:path*']
+  matcher: ['/', '/(de|en)/:path*']
 };
