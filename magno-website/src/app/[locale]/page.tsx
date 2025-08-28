@@ -2,6 +2,9 @@
 // import styles from "./page.module.css";
 // import NavBar from "@/components/navBar/navBar";
 
+import MagnoDefinition from "./components/magnoDefinition/magnoDefinition";
+
+
 // export default function Home() {
 //   return (
 //     <main className={styles.page}>
@@ -15,7 +18,6 @@
 //   );
 // }
 
-import MagnoDefinition from '@/components/magnoDefinition/magnoDefinition';
 export default function HomePage() {
   return (
     <main>

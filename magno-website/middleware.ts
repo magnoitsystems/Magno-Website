@@ -1,15 +1,19 @@
+// middleware.ts
 import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-  // Idiomas que soportás
+  // A list of all locales that are supported
   locales: ['en', 'es'],
-  // Idioma por defecto si el navegador no coincide con ninguno
-  defaultLocale: 'es',
-  // Detecta idioma del navegador automáticamente
-  localeDetection: true
+
+  // Used when no locale matches
+  defaultLocale: 'es'
 });
 
 export const config = {
-  // Se aplica a todas las rutas menos estáticos y API
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  // Matcher de next.js. Aplica el middleware a todas las rutas que NO incluyan:
+  // - Rutas de API
+  // - Archivos estáticos
+  // - Archivos con extensión
+  // El último '.*' se asegura de incluir rutas con y sin prefijo de idioma.
+  matcher: ['/', '/(es|en)/:path*']
 };
