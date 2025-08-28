@@ -1,0 +1,13 @@
+.titleProperties h1{
+    width: 560px;
+    height: 250px;
+    font-size: 60px;
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+
+.titleProperties h1 span{
+    background: linear-gradient(45deg, var(--gold-1), var(--gold-5));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
