@@ -15,10 +15,13 @@
 //   );
 // }
 
-import {useTranslations} from 'next-intl';
- 
+import MagnoDefinition from '@/components/magnoDefinition/magnoDefinition';
 export default function HomePage() {
-  const t = useTranslations('HomePage');
-  return <h1>{t('title')}</h1>;
+  return (
+    <main>
+      <MagnoDefinition />
+      {/* Aquí puedes agregar más componentes */}
+    </main>
+  );
 }
 

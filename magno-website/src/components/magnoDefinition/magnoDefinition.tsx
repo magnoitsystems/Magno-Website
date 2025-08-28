@@ -22,7 +22,7 @@ const MagnoDefinition = () => {
             />
             <h1 className={styles.title}>{t('title')}</h1>
           </div>
-          
+
           <div className={styles.definition}>
             <p className={styles.definitionText}>
               <span className={styles.label}>{t('definition.label')}</span>
@@ -38,14 +38,16 @@ const MagnoDefinition = () => {
           <p className={styles.description}>
             {t('description.intro')}
           </p>
-          
+
           <p className={styles.mainDescription}>
             {t.rich('description.main', {
-              superar: (chunks) => <span className={styles.highlight}>{t('description.superar')}</span>,
-              destacar: (chunks) => <span className={styles.highlight}>{t('description.destacar')}</span>,
-              altura: (chunks) => <span className={styles.highlight}>{t('description.altura')}</span>,
+              superar: (chunks) => <span className={styles.highlight}>{chunks}</span>,
+              destacar: (chunks) => <span className={styles.highlight}>{chunks}</span>,
+              altura: (chunks) => <span className={styles.highlight}>{chunks}</span>,
             })}
           </p>
+
+
         </div>
       </div>
     </section>
