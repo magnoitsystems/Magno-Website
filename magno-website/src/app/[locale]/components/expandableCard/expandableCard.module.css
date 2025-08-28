@@ -2,72 +2,80 @@
   display: flex;
   flex-direction: column;
   gap: var(--15px);
+  margin: 0 var(--15px);              /* margen lateral mobile */
+  text-align: center;
 }
 
-/* Card */
+/* ===== CARD ===== */
 .card {
   border: 1px solid var(--gold-2);
   border-radius: 8px;
   overflow: hidden;
-  background: transparent;
+  background: transparent;            /* cerrado: fondo transparente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Botón header */
+/* ABIERTO: el FONDO va en .card (no en header/content) -> sin raya */
+.card.open {
+  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+}
+
+/* ===== HEADER ===== */
 .cardHeader {
   width: 100%;
-  background: transparent;
+  background: transparent;            /* siempre transparente */
   color: var(--neutral-1);
   font-size: var(--h5);
   padding: var(--15px) var(--20px);
-  text-align: left;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: var(--10px);
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  border: none;                        /* evita línea */
 }
 
-.cardHeader:hover {
-  background: var(--neutral-4);
-}
+/* Texto oscuro cuando está abierta (fondo dorado) */
+.card.open .cardHeader { color: var(--neutral-5); }
 
-.cardHeader.active {
-  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
-  color: var(--neutral-5);
-}
+/* ===== ICONO (solo mobile) ===== */
+.arrow { display: flex; align-items: center; }
+.icon  { fill: currentColor; transition: transform 0.2s ease; }
 
-/* Icon */
-.icon {
-  fill: var(--neutral-1); /* color flecha */
-  transition: fill 0.3s ease;
-}
-
-.cardHeader.active .icon {
-  fill: var(--neutral-5); /* cambia cuando se abre */
-}
-
-
-/* Contenido */
+/* ===== CONTENT ===== */
 .cardContent {
-  background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;            /* siempre transparente */
   color: var(--neutral-5);
-  padding: var(--15px) var(--20px);
+  padding: 0 var(--20px);
   font-size: var(--h6);
   line-height: 1.5;
+  opacity: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
 }
 
-/* Desktop layout */
+.cardContent p { margin: 0; }
+
+.card.open .cardContent {             /* color del texto correcto sobre dorado */
+  color: var(--neutral-5);
+}
+
+.cardContent.show {
+  max-height: 500px;                  /* suficiente para el texto */
+  padding: var(--15px) var(--20px);
+  opacity: 1;
+}
+
+/* ===== DESKTOP ===== */
 @media (min-width: 768px) {
   .cardsContainer {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;          /* <-- clave: NO estirar alto de hermanas */
+    gap: var(--25px);
+    margin: 0;
   }
-
-  .card {
-    flex: 1;
-    max-width: 300px;
-  }
+  .card { width: 300px; }
+  .arrow { display: none; }           /* sin flechas en desktop */
 }
-
-
-
