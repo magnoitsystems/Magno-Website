@@ -1,26 +1,97 @@
 .portfolioContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--40px);
+  gap: var(--30px);
   text-align: center;
   margin: var(--30px) 0;
 }
 
-.topProjectsGrid {
-  display: flex;
-  gap: var(--20px);
-  justify-content: center;
-  flex-wrap: wrap;
+.portfolioText {
+  padding: 0 var(--20px);
 }
 
-.bottomSection {
+.portfolioText h2 {
+  font-size: var(--h2);
+  color: var(--pink-1);
+  margin-bottom: var(--15px);
+}
+
+.portfolioText p {
+  font-size: var(--h5);
+  color: var(--neutral-1);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mobileCarousel {
+  position: relative;
+  width: 100%;
   display: flex;
-  gap: var(--40px);
-  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; 
-  max-width: 880px;
-  margin: 0 auto; 
+  justify-content: center;
+  gap: var(--10px);
+}
+
+.carouselContainer {
+  width: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carouselSlide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.carouselButton {
+  background: transparent; 
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.carouselButton:hover {
+  color: var(--pink-1); 
+  transform: scale(1.1);
+}
+
+.carouselButton:active {
+  transform: scale(0.95);
+}
+
+.slideIndicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--10px);
+  margin-top: var(--20px);
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.activeIndicator {
+  background: var(--pink-1);
+  transform: scale(1.2);
 }
 
 .projectItem {
@@ -29,8 +100,9 @@
   overflow: hidden;
   border-radius: 12px;
   transition: transform 0.3s;
-  width: 400px;
-  height: 267px;
+  display: block;
+  width: 280px;
+  height: 187px;
 }
 
 .projectItem:hover {
@@ -56,7 +128,7 @@
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .projectLogo {
@@ -73,47 +145,73 @@
   opacity: 0;
 }
 
-.portfolioText {
-  width: 375px; 
-  flex-shrink: 0; 
-  text-align: center; 
+.desktopLayout {
+  display: none;
 }
 
-.portfolioText h2 {
-  font-size: calc(var(--h2) * 1.1);
-  color: var(--pink-1);
-  margin-bottom: var(--15px);
-}
-
-.portfolioText p {
-  font-size: var(--h5); 
-  color: var(--neutral-1);
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .bottomSection {
-    flex-direction: column;
+@media (min-width: 769px) {
+  .portfolioContainer {
+    gap: var(--40px);
   }
-  
-  .portfolioText {
-    text-align: center;
-  }
-  
-  .projectItem {
-    width: 350px;
-    height: 233px;
-  }
-}
 
-@media (max-width: 480px) {
+  .portfolioText,
+  .mobileCarousel,
+  .slideIndicators {
+    display: none;
+  }
+
+  .desktopLayout {
+    display: block;
+  }
+
   .topProjectsGrid {
-    flex-direction: column;
+    display: flex;
+    gap: var(--20px);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bottomSection {
+    display: flex;
+    gap: var(--40px);
+    justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .portfolioTextDesktop {
+    width: 400px;
+    flex-shrink: 0;
+    text-align: left;
+  }
+
+  .portfolioTextDesktop h2 {
+    font-size: calc(var(--h2) * 1.1);
+    color: var(--pink-1);
+    margin-bottom: var(--15px);
+  }
+
+  .portfolioTextDesktop p {
+    font-size: var(--h5);
+    color: var(--neutral-1);
+    line-height: 1.6;
+  }
+
+  .desktopLayout .projectItem {
+    width: 400px;
+    height: 267px;
+  }
+}
+
+@media (max-width: 320px) {
+  .carouselContainer {
+    width: 250px;
   }
   
   .projectItem {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 167px;
   }
 }
