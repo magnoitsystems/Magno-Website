@@ -1,20 +1,22 @@
 .welcomeSection{
     display: flex;
-    flex-direction: row;
-    gap: 10%;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
 }
 
 .titleProperties h1{
     font-weight: bold;
-    width: 560px;
+    width: 400px;
     height: 250px;
+    text-align: center;
 }
 
 .titleProperties{
     display: flex;
     flex-direction: column;
-    gap: var(--50px);
-    margin-left: 8%;
+    gap: var(--25px);
+    align-items: center;
 }
 
 .titleProperties h1 span{
@@ -24,7 +26,7 @@
 }
 
 .titleProperties h1, .titleProperties h1 span{
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .titleProperties h1, .titleProperties h1 span, .titleProperties span{
@@ -33,10 +35,37 @@
 
 .titleProperties span{
     font-size: var(--30px);
-    width: 380px;
+    width: 310px;
     height: 100px;
     font-weight: bold;
     background: linear-gradient(45deg, rgba(212, 58, 179, 1), var(--gold-1));
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 780px) {
+    .welcomeSection{
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+    }
+
+    .titleProperties h1{
+        width: 560px;
+        text-align: left;
+    }
+
+    .titleProperties{
+        gap: var(--50px);
+        margin-left: 8%;
+        align-items: start;
+    }
+
+    .titleProperties h1, .titleProperties h1 span{
+        font-size: 60px;
+    }
+
+    .titleProperties span{
+        align-items: start;
+    }
 }
