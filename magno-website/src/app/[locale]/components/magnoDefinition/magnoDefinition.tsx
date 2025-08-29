@@ -3,12 +3,13 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import styles from './magnoDefinition.module.css';
+import {openSans} from "@/app/ui/fonts";
 
 const MagnoDefinition = () => {
   const t = useTranslations('magno');
 
   return (
-    <section className={styles.heroSection}>
+    <section className={`${styles.heroSection} ${openSans.className}`}>
       <div className={styles.container}>
         {/* Logo y título */}
         <div className={styles.logoSection}>
