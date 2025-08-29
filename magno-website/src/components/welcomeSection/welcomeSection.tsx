@@ -3,10 +3,10 @@ import styles from './welcomeSection.module.css'
 
 export default function WelcomeSection(){
     return(
-        <section>
+        <section className={styles.welcomeSection}>
             <div className={styles.titleProperties}>
-                <h1> Nosotros te acompañamos en el salto <span>digital</span> </h1>
-                <span> Invertí en nosotros, invertí en tu aplicación </span>
+                <h1> We accompany you in the <span>digital</span> leap </h1>
+                <span> You invested in us, you invested in your app </span>
             </div>
             <div>
                 <Form/>

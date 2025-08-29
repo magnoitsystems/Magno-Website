@@ -1,0 +1,43 @@
+.formProperties{
+    display: flex;
+    flex-direction: column;
+    width: 590px;
+    height: 400px;
+    background: linear-gradient(180deg, var(--neutral-6), rgba(15, 15, 15, 1), var(--neutral-5), rgba(33, 33, 33, 1));
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.1);
+    gap: var(--15px);
+    padding-top: var(--30px);
+    align-items: center;
+}
+
+.formProperties label{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--15px);
+    font-family: "Inter";
+}
+
+.formProperties input, .formProperties select{
+    width: 515px;
+    height: 37px;
+    border-radius: var(--10px);
+    border: var(--gold-4) 1px solid;
+    background-color: transparent;
+}
+
+.formProperties input::placeholder, .formProperties select:optional{
+    font-size: 12px;
+    padding-left: 10px;
+    color: var(--neutral-1);
+}
+
+.buttonProperties{
+    width: 280px;
+    height: 40px;
+    background: linear-gradient(350deg, var(--gold-1), rgba(231, 174, 118, 1), var(--gold-5), rgba(145, 109, 86, 1));
+    color: var(--neutral-5);
+    font-size: 18px;
+    border-radius: 100px;
+    border: none;
+}
