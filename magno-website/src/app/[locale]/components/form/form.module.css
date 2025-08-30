@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: start;
     gap: var(--30px);
-    padding-top: var(--30px);
 }
 
 .formProperties{
@@ -17,6 +16,8 @@
     gap: var(--30px);
     justify-self: center;
     align-items: center;
+    justify-content: center;
+    padding-inline: var(--10px);
 }
 
 .labelsProperties label{
@@ -24,7 +25,7 @@
     flex-direction: column;
     font-size: var(--15px);
     font-family: "Inter";
-    padding-left: var(--30px);
+    margin-inline: auto;
 }
 
 .formProperties input, .formProperties select{
@@ -68,23 +69,26 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: var(--30px);
+        gap: var(--25px);
         padding-top: var(--30px);
+        width: 90%;
     }
 
     .formProperties label{
         display: flex;
         flex-direction: column;
-        font-size: var(--15px);
-        font-family: "Inter";
+        font-size: var(--h6);
+        width: 100%;
     }
 
     .formProperties input, .formProperties select{
-        width: 515px;
+        width: 100%;
         height: 37px;
         border-radius: var(--10px);
         border: var(--gold-4) 1px solid;
         background-color: transparent;
+        margin-top: var(--5px);
+        font-weight: lighter;
     }
 
     .formProperties input::placeholder, .formProperties select:optional{

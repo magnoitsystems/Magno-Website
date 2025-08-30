@@ -53,13 +53,14 @@
     }
 
     .titleProperties h1{
-        width: 560px;
         text-align: left;
+        width: 80%;
     }
 
     .titleProperties{
         gap: var(--50px);
         align-items: start;
+        width: 50%;
     }
 
     .titleProperties h1, .titleProperties h1 span{
