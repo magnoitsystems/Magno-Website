@@ -1,0 +1,12 @@
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+
+    margin: var(--50px);
+    margin-inline: 0;
+
+    background-image: url("/logos/byn.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

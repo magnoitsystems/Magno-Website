@@ -4,6 +4,7 @@
   justify-content: center;
   padding: var(--20px);
   padding-inline: 0;
+  margin: 6rem;
   margin-inline: auto;
   width: 90%;
 }
