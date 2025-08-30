@@ -1,4 +1,4 @@
-import Form from '@/components/form/form';
+import Form from '@/app/[locale]/components/form/form';
 import styles from './welcomeSection.module.css'
 
 export default function WelcomeSection(){

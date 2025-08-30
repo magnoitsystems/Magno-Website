@@ -1,7 +1,7 @@
 import Services from "./components/servicesSection/services";
 import NavBar from "@/app/[locale]/components/navBar/navBar";
 import PortfolioProjects from "./components/portfolio/portfolioProjects";
-import WelcomeSection from "@/components/welcomeSection/welcomeSection";
+import WelcomeSection from "@/app/[locale]/components/welcomeSection/welcomeSection";
 
 export default function HomePage() {
   return (

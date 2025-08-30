@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    height: fit-content;
 }
 
 .titleProperties h1{
@@ -36,7 +37,6 @@
 .titleProperties span{
     font-size: var(--30px);
     width: 310px;
-    height: 100px;
     font-weight: bold;
     background: linear-gradient(45deg, rgba(212, 58, 179, 1), var(--gold-1));
     background-clip: text;
@@ -47,7 +47,9 @@
     .welcomeSection{
         display: flex;
         flex-direction: row;
-        gap: 10%;
+        width: 90%;
+        justify-content: space-between;
+        margin-inline: auto;
     }
 
     .titleProperties h1{
@@ -57,7 +59,6 @@
 
     .titleProperties{
         gap: var(--50px);
-        margin-left: 8%;
         align-items: start;
     }
 
@@ -67,5 +68,6 @@
 
     .titleProperties span{
         align-items: start;
+        width: 60%;
     }
 }
