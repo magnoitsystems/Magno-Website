@@ -4,6 +4,7 @@
   gap: var(--30px);
   text-align: center;
   margin: var(--30px) 0;
+  width: 100%;
 }
 
 .portfolioText {
@@ -36,7 +37,7 @@
 .carouselContainer {
   width: 280px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 .carouselTrack {
@@ -64,7 +65,7 @@
 }
 
 .carouselButton:hover {
-  color: var(--pink-1); 
+  color: var(--pink-1);
   transform: scale(1.1);
 }
 
@@ -98,15 +99,11 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 5px;
   transition: transform 0.3s;
   display: block;
   width: 280px;
   height: 187px;
-}
-
-.projectItem:hover {
-  transform: scale(1.03);
 }
 
 .projectImage {
@@ -166,25 +163,27 @@
 
   .topProjectsGrid {
     display: flex;
+    flex-direction: row;
     gap: var(--20px);
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .bottomSection {
     display: flex;
-    gap: var(--40px);
+    gap: var(--20px);
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    max-width: 880px;
-    margin: 0 auto;
+    width: 100%;
+    margin: var(--20px) auto;
   }
 
   .portfolioTextDesktop {
-    width: 400px;
+    width: 45%;
     flex-shrink: 0;
-    text-align: left;
+    text-align: center;
   }
 
   .portfolioTextDesktop h2 {
@@ -200,18 +199,7 @@
   }
 
   .desktopLayout .projectItem {
-    width: 400px;
+    width: 45%;
     height: 267px;
-  }
-}
-
-@media (max-width: 320px) {
-  .carouselContainer {
-    width: 250px;
-  }
-  
-  .projectItem {
-    width: 250px;
-    height: 167px;
   }
 }
